@@ -305,10 +305,8 @@ These optimizations reduce the sequential overhead of visually grounded search a
 ## 🙏 Acknowledgements
 DeepScan builds on several excellent open-source projects and model ecosystems. We would like to give special thanks first to **[DyFo](https://github.com/PKU-ICST-MIPL/DyFo_CVPR2025)** for its inspiring open-source release. We also acknowledge the following projects and model ecosystems:
 
-- **[DyFo](https://github.com/PKU-ICST-MIPL/DyFo_CVPR2025)**
 - **Qwen2-VL / Qwen2.5-VL**
-- **LLaVA**
-- **LAVIS / BLIP**
+- **LAVIS**
 - **LangSAM**
 - **SAM2**
 - **vLLM**
