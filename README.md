@@ -10,7 +10,6 @@
     <a href="https://arxiv.org/abs/2603.03857"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2603.03857-B31B1B"></a>
     <a href="#"><img alt="Framework" src="https://img.shields.io/badge/Framework-Training--Free-10B981"></a>
     <a href="#"><img alt="Grounding" src="https://img.shields.io/badge/Grounding-Bottom--Up-111827"></a>
-    <a href="./LICENSE.txt"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-7C3AED"></a>
   </p>
 </div>
 
@@ -54,7 +53,7 @@ Unlike RL-based visually grounded reasoning methods, DeepScan is **plug-and-play
 
 ## 🏗 Repository Structure
 ```text
-code/
+DeepScan/
 ├── scripts/
 │   ├── blip_server/       # Search-expert service (BLIP-ITM + Grad-CAM attention)
 │   ├── expert_server/     # Visual-expert service (LangSAM-based detection)
@@ -74,7 +73,7 @@ code/
 │       ├── client.py
 │       ├── mstc.py
 │       └── ...
-└...
+└── README.md
 ```
 
 ---
@@ -95,37 +94,28 @@ conda create -n deepscan python=3.10 -y
 conda activate deepscan
 ```
 
-### 3) Install dependencies
-The current repository provides a pinned dependency file. We recommend installing the packaged runtime dependencies directly from it:
+### 3) Install core dependencies
+This codebase is built around a service-oriented pipeline. At minimum, you will need PyTorch, Transformers, OpenCV, FastAPI, and the supporting packages used by the search / visual experts and LVLM runtime.
 
 ```bash
-pip install -r requirements.txt
+pip install torch torchvision torchaudio
+pip install transformers accelerate qwen-vl-utils vllm
+pip install fastapi uvicorn openai aiohttp pandas scikit-learn shortuuid
+pip install pillow numpy matplotlib opencv-python requests
 ```
 
-The uploaded dependency file pins the following core packages / versions in the current repository snapshot:
+Depending on your local setup, you will also need the expert-side dependencies used in this repository:
 
-```text
-aiohttp==3.10.10
-debugpy==1.8.8
-fastapi==0.115.12
-kagglehub==0.3.10
-matplotlib==3.10.1
-numpy==1.26.4
-openai==1.69.0
-pandas==2.2.3
-Pillow==11.1.0
-pydantic==2.11.0
-Requests==2.32.3
-scikit_learn==1.6.1
-shortuuid==1.0.13
-torch==2.4.0
-tqdm==4.66.6
-uvicorn==0.34.0
-vllm==0.6.3.post1
-transformers==4.46.1
+```bash
+# Search expert
+pip install salesforce-lavis
+
+# Visual expert
+pip install lang-sam
+
+# SAM2 backend
+# Install from your local / official SAM2 checkout as needed.
 ```
-
-> **Note.** In addition to the Python packages above, DeepScan still depends on externally prepared model checkpoints / expert backends (e.g., BLIP-ITM, LangSAM, SAM2, and the target LVLM). These should be installed or prepared according to your local deployment setup before launching the multi-service pipeline.
 
 ### 4) Prepare checkpoints and local paths
 The provided code snapshot contains several **environment-specific local paths / placeholders** that should be updated before launch. In particular, check:
@@ -312,14 +302,10 @@ These optimizations reduce the sequential overhead of visually grounded search a
 
 ---
 
-## 📄 License
-This project is released under the **Apache License 2.0**. Please see [`LICENSE.txt`](./LICENSE.txt) for the full license text.
-
----
-
 ## 🙏 Acknowledgements
-DeepScan builds on several excellent open-source projects and model ecosystems, including:
+DeepScan builds on several excellent open-source projects and model ecosystems. We would like to give special thanks first to **[DyFo](https://github.com/PKU-ICST-MIPL/DyFo_CVPR2025)** for its inspiring open-source release. We also acknowledge the following projects and model ecosystems:
 
+- **[DyFo](https://github.com/PKU-ICST-MIPL/DyFo_CVPR2025)**
 - **Qwen2-VL / Qwen2.5-VL**
 - **LLaVA**
 - **LAVIS / BLIP**
