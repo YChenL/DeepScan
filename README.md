@@ -19,8 +19,10 @@
 ---
 
 ## 🔥 News
-- **2026-03.** DeepScan is released as an arXiv preprint: **DeepScan: A Training-Free Framework for Visually Grounded Reasoning in Large Vision-Language Models**.
-- **2026-03.** This repository provides a service-oriented implementation of the DeepScan pipeline, including the **search expert**, **visual expert**, and **LVLM** backends used for visually grounded inference.
+- [x] **2026-02.** DeepScan was accepted as a **CVPR 2026 Main Conference** paper.
+- [x] **2026-03.** DeepScan was released on arXiv as **DeepScan: A Training-Free Framework for Visually Grounded Reasoning in Large Vision-Language Models**.
+- [x] **2026-03.** We open-sourced the main DeepScan codebase, including the **search expert**, **visual expert**, and the core **DeepScan framework**.
+- [ ] **TODO.** Release the evaluation scripts.
 
 ---
 
