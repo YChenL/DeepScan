@@ -85,7 +85,7 @@ DeepScan/
 
 ### 1) Clone
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/YChenL/DeepScan
 cd DeepScan
 ```
 
@@ -101,10 +101,7 @@ conda activate deepscan
 This codebase is built around a service-oriented pipeline. At minimum, you will need PyTorch, Transformers, OpenCV, FastAPI, and the supporting packages used by the search / visual experts and LVLM runtime.
 
 ```bash
-pip install torch torchvision torchaudio
-pip install transformers accelerate qwen-vl-utils vllm
-pip install fastapi uvicorn openai aiohttp pandas scikit-learn shortuuid
-pip install pillow numpy matplotlib opencv-python requests
+pip install -r requirements.txt
 ```
 
 Depending on your local setup, you will also need the expert-side dependencies used in this repository:
