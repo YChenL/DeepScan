@@ -19,10 +19,10 @@
 ---
 
 ## 🔥 News
-- [x] **2026-02.** DeepScan was accepted as a **CVPR 2026 Main Conference** paper.
-- [x] **2026-03.** DeepScan was released on arXiv as **DeepScan: A Training-Free Framework for Visually Grounded Reasoning in Large Vision-Language Models**.
-- [x] **2026-03.** We open-sourced the main DeepScan codebase, including the **search expert**, **visual expert**, and the core **DeepScan framework**.
 - [ ] **TODO.** Release the evaluation scripts.
+- [x] **2026-03.** The core codebase is open-sourced !
+- [x] **2026-02.** DeepScan was accepted as a **CVPR 2026 Main Conference** paper.
+
 
 ---
 
