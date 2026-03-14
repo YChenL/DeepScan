@@ -213,36 +213,6 @@ After inference, you can evaluate predictions with:
 ```bash
 python src/eval.py --path outputs/deepscan_predictions.jsonl
 ```
-
----
-
-## ⚙️ Default Configuration (Paper-Aligned)
-The main paper and supplementary material use the following default settings for DeepScan:
-
-- **Search expert**: **BLIP-ITM base**
-- **Visual expert**: **LangSAM**
-- **Candidate count**: **k = 10**
-- **Patch size**:
-  - **576 × 576** for **single-object** questions
-  - **768 × 768** for **multi-object** questions
-- **Noisy-cue area threshold**: **50 pixels**
-- **Morphological closing kernel**: **5 × 5** flat structuring element
-- **Morphological dilation**: disk with **radius r = 20**
-- **IoU threshold** for filtering similar evidence: **0.3**
-- **Refocusing zoom-out scale**: **s = 1.5**
-- **Refocusing detection padding**: **28 pixels** on each side
-- **Max output length**:
-  - **50** tokens for:
-    - Evidence Decomposition
-    - Evidence Judgment
-    - View Completeness Justification
-  - **1024** tokens for final Evidence-Enhanced Reasoning
-- **Inference temperature**: **0**
-- **Random seed**: **13**
-- **Beam search / top-k sampling**: disabled by default
-
-These settings provide the default performance–latency trade-off reported in the paper.
-
 ---
 
 ## 🧩 Prompting Roles in DeepScan
@@ -257,8 +227,6 @@ DeepScan relies on three lightweight LVLM query templates:
 
 3. **View Completeness Justification**
    - Judge whether a refocused view fully contains every target object without truncation.
-
-The exact prompt templates are given in the supplementary material and correspond to the logic implemented by the DeepScan pipeline.
 
 ---
 
