@@ -21,7 +21,7 @@
 ## 🔥 News
 - [ ] **TODO.** Release the evaluation scripts.
 - [x] **2026-03.** The core codebase is open-sourced !
-- [x] **2026-02.** DeepScan was accepted as a **CVPR 2026 Main Conference** paper.
+- [x] **2026-02.** DeepScan was accepted to **CVPR 2026** main track.
 
 
 ---
