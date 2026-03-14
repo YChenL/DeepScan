@@ -1,8 +1,9 @@
 <div align="center">
-  <h1>🔎 DeepScan</h1>
+  <h1>🔎 DeepScan: A Training-Free Framework for Visually Grounded Reasoning in Large Vision-Language Models</h1>
   <p>
     <em>Official implementation of the CVPR 2026 paper:<br>
-    <strong>“DeepScan: A Training-Free Framework for Visually Grounded Reasoning in Large Vision-Language Models”</strong></em>
+    <!-- <strong>“DeepScan: A Training-Free Framework for Visually Grounded Reasoning in Large Vision-Language Models”</strong> -->
+    </em>
   </p>
 
   <p>
